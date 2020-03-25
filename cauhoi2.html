@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Bạn đã đeo khẩu trang đúng cách?</title>
+    <style>
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-direction {
+            flex-direction: column;
+        }
+
+        input {
+            background-color: #5de3e3;
+            width: 500px;
+            height: 100px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="logo" src="logonCov.jpg.png">
+    </div>
+    <div id="all-menu-1">
+        <a id="border-1" class="menu" href="corona.html">
+            <p class="font-1">Home</p>
+        </a>
+        <a id="border-2" class="menu" href="info.html">
+            <p class="font-1">Info</p>
+        </a>
+        <a id="border-3" class="menu" href="map.html">
+            <p class="font-1">Map</p>
+        </a>
+        <a id="border-4" class="menu" href="protect.html">
+            <p class="font-1">Protect</p>
+        </a>
+        <a id="border-5" class="menu" href="game.html">
+            <p class="font-1">Game Quiz</p>
+        </a>
+        <a id="border-6" class="menu" href="donate.html">
+            <p class="font-1">Donate</p>
+        </a>
+        <!-- Căn giữu chữ -->
+    </div>
+    <div id="container" class="d-flex flex-direction">
+
+        <div>
+            <p id="question"></p>
+            <p id="score"></p>
+        </div>
+        <div>
+            <div class="d-flex">
+                <input type="button" id="1" onclick=checkAnswer(this.value)>
+                <input type="button" id="2" onclick=checkAnswer(this.value)>
+            </div>
+            <div class="d-flex">
+                <input type="button" id="3" onclick=checkAnswer(this.value)>
+                <input type="button" id="4" onclick=checkAnswer(this.value)>
+            </div>
+        </div>
+        <input type="button" style="height: 30px;width: 120px; background-color: salmon;" onclick=nextQuestion()
+            value=" Next Question ">
+    </div>
+</body>
+<script>
+    var questionList = ["Câu 1: Đeo nhiều khẩu trang cùng lúc có an toàn hơn?", "Câu 2: Đeo khẩu trang y tế có bảo vệ tôi khỏi virus?", "Câu 3: Khẩu trang dùng xong có được bỏ ở thùng rác trong nhà hay phải vứt đi xa?", "Câu 4: Đeo khẩu trang y tế thế nào để đề phòng virus Corona?", "Câu 5: Sau khi sử dụng, để đảm bảo an toàn, không được xử lý khẩu trang theo cách nào?", "Câu 6: Loại khẩu trang nào giúp phòng virus Corona tốt hơn?"];
+    var answerList = [
+        { A: "A.Có", B: "B. Không", C: "C. Chưa chắc", D: "D. Có thể" },
+        { A: "A.Chỉ khẩu trang y tế là đủ", B: "B. Phải kết hợp với vệ sinh cá nhân, vệ sinh dụng cụ, vật dụng và rửa tay với xà phòng", C: "C. Chỉ cần vệ sinh cá nhân có thể bảo vệ bạn khỏi virus", D: "D. Không cần đeo khẩu trang" },
+
+        { A: "A. Miễn thùng rác an toàn có nắp đậy", B: "B. Cần phải vứt đi xa", C: "C. Để gần cũng được", D: "D. Không quan trọng" },
+
+        { A: "A. Chỉ sử dụng 1 lần rồi vứt vào thùng rác có nắp đậy", B: "B. Ăn hoặc uống sau khi tháo bỏ khầu trang mà chă sát khuẩn tay", C: "C. Khi đeo khẩu trang phải để mặt xanh ra ngoài", D: "D. Che kín cả mũi lẫn miệng khi đeo khẩu trang" },
+
+        { A: "A. Chỉ cầm vào dây quai đeo qua tai để tháo.", B: "B. Với khẩu trang y tế dùng 1 lần, vứt bỏ vào thừng rác có nắp đậy", C: "C. Có thể dùng tay cầm trực tiếp vapf bề mặt khẩu trang để tháo ra", D: "D. Rửa tay sau khi vứt bỏ khẩu trang phòng bệnh" },
+
+        { A: "A. Nhất thiết tất cả trường hợp phải đeo khẩu trang N95", B: "B. Trong trường hợp bình thường, người dân có thể dùng khẩu trang y tế thông thường", C: "C. Trong trường hợp bình thường, người dân có thể dùng khẩu trang vải được giặt sạch hằng ngày", D: "D. Người dân có thể sử dụng nhiều loại khẩu trang khác nhau để phòng tránh dịch" }];
+
+    var correctList = ["B. Không", "B. Phải kết hợp với vệ sinh cá nhân, vệ sinh dụng cụ, vật dụng và rửa tay với xà phòng", "A. Miễn thùng rác an toàn có nắp đậy", "A. Chỉ sử dụng 1 lần rồi vứt vào thùng rác có nắp đậy", "C. Có thể dùng tay cầm trực tiếp vapf bề mặt khẩu trang để tháo ra", "B. Trong trường hợp bình thường, người dân có thể dùng khẩu trang y tế thông thường"];
+
+    var count = 0;
+    var score = 0;
+    function fillQuestion(number) {
+        document.getElementById("question").innerHTML = questionList[number];
+        document.getElementById("1").value = answerList[number].A;
+        document.getElementById("2").value = answerList[number].B;
+        document.getElementById("3").value = answerList[number].C;
+        document.getElementById("4").value = answerList[number].D;
+    }
+
+    function checkAnswer(value) {
+        count = count + 1;
+        var a = document.getElementById("1").value = answerList[count - 1].A;
+        var b = document.getElementById("2").value = answerList[count - 1].B;
+        var c = document.getElementById("3").value = answerList[count - 1].C;
+        var d = document.getElementById("4").value = answerList[count - 1].D;
+        if (value == correctList[count - 1]) {
+            score = score + 1;
+            if (value == a) {
+                document.getElementById("1").style.background = "#00FF00";
+            }
+            if (value == b) {
+                document.getElementById("2").style.background = "#00FF00";
+            }
+            if (value == c) {
+                document.getElementById("3").style.background = "#00FF00";
+            }
+            if (value == d) {
+                document.getElementById("4").style.background = "#00FF00";
+            }
+        }
+        if (value != correctList[count - 1]) {
+            if (value == a) {
+                document.getElementById("1").style.background = "red";
+            }
+            if (value == b) {
+                document.getElementById("2").style.background = "red";
+            }
+            if (value == c) {
+                document.getElementById("3").style.background = "red";
+            }
+            if (value == d) {
+                document.getElementById("4").style.background = "red";
+            }
+        }
+        if (count == 6) {
+            alert(score);
+        }
+        document.getElementById("score").innerHTML = score;
+        // fillQuestion(count);
+    }
+
+    window.onload = fillQuestion(count);
+    function nextQuestion() {
+        fillQuestion(count);
+        document.getElementById("1").style.background = "aqua";
+        document.getElementById("2").style.background = "aqua";
+        document.getElementById("3").style.background = "aqua";
+        document.getElementById("4").style.background = "aqua";
+    }
+
+</script>
+
+</html>

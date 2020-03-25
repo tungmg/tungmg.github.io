@@ -1,0 +1,327 @@
+#logo{
+    margin: 0;
+    width: 200px;
+    /* margin-top: 35px; */
+   position: absolute;
+   top: -1px;
+}
+#border-1:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-2:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-3:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-4:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-5:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-6:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+.menu{
+    background-color: white;
+    text-decoration: none;
+    color: white;
+    font-family: avenir-lt-w01_85-heavy1475544,sans-serif;
+    margin-top: -14px;
+    
+}
+
+
+#all-menu-1{
+    text-align: right;
+    font-size: 20px;
+    margin-right: -7px;
+    display:flex;
+    justify-content:flex-end;
+    margin-top: 15px;
+}
+
+
+
+#picture-1{
+    width: 1280px;
+    margin-top: -0,2px;
+    margin-left: -10px;
+    background-attachment: fixed;
+    /* margin-right: 10px; */
+}
+
+#border-1{
+    height: 80px;
+    width: 130px;
+    background-color: #82bbf5;
+    text-align: center;
+}
+
+#border-2{
+    height: 80px;
+    width: 130px;
+    background-color: #9d56e8;
+    text-align: center;
+}
+
+#border-3{
+    height: 80px;
+    width: 130px;
+    background-color:#82bbf5;
+    text-align: center;
+}
+
+#border-4{
+    height: 80px;
+    width: 130px;
+    background-color: #9d56e8;
+    text-align: center;
+}
+
+#border-5{
+    height: 80px;
+    width: 130px;
+    background-color:#82bbf5;
+    text-align: center;
+}
+
+#border-6{
+    height: 80px;
+    width: 130px;
+    background-color: #9d56e8;
+    text-align: center;
+}
+
+.font-1{
+    margin-top: 26px;
+}
+
+/* End-menu */
+
+#div-1{
+    width: 160px;
+    height: 30px;
+    background-color:rgb(241, 86, 42);
+    position: absolute;
+    top: 200px;
+    left: 90px;
+}
+
+#h-1{
+    position: absolute;
+    top: 250px;
+    left: 90px;
+    font-size: 80px;
+    font-family: poppins-semibold,poppins,sans-serif;;
+}
+
+#h-2{
+    font-family: poppins-semibold,poppins,sans-serif;
+    font-size: 50px;
+}
+
+#img-1{
+    height: 50px;
+    position: absolute;
+    top: 47px;
+    left: 400px;
+}
+
+#div-2{
+    display: flex;
+    position: absolute;
+    top: 600px;
+    left: 90px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#h-3{
+    font-family: poppins-semibold,poppins,sans-serif;
+    font-size: 50px;
+}
+
+#img-2{
+    height: 50px;
+    position: absolute;
+    top: 40px;
+    left: 400px;
+}
+
+#div-3{
+    display: flex;
+    position: absolute;
+    top: 750px;
+    left: 90px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#p-1{
+    font-family: poppins-semibold,poppins,sans-serif;
+    font-size: 25px;
+    position: absolute;
+    top: 900px;
+    left: 90px;
+}
+
+#img-3{
+    position: absolute;
+    top: 600px;
+    left: 730px;
+}
+
+#div-4{
+    width: 900px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 1100px;
+    left: 200px;
+}
+#h-5{
+    position: absolute;
+    top: 1120px;
+    left:580px;
+    font-family: oppins-semibold,poppins,sans-serif;
+    color: rgb(241, 86, 42) ;
+}
+
+#ip-1{
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    top: 1200px;
+    left: 450px;
+}
+
+#ip-2{
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    top: 1260px;
+    left: 450px;
+}
+
+#select{
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    top: 1320px;
+    left: 450px;
+}
+
+#ip-4{
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    top: 1380px;
+    left: 450px;
+}
+
+#ip-5{
+    width: 140px;
+    height: 50px;
+    background-color:rgb(210, 33, 25); ;
+    position: absolute;
+    top: 1500px;
+    left: 580px;
+    color: white;
+}
+
+#h-9{
+    font-family:poppins-semibold,poppins,sans-serif ;
+    font-size: 50px;
+    position: absolute;
+    top: 1700px;
+    left: 70px;
+}
+
+#p-15{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 15px;
+    position: absolute;
+    top: 1800px;
+    left: 70px;
+}
+
+#p-16{
+    font-size: 22px;
+    position: absolute;
+    top: 1730px;
+    left: 700px;
+}
+
+#p-17{
+    font-size: 22px;
+    position: absolute;
+    top: 1730px;
+    left: 910px;
+}
+
+#p-18{
+    font-size: 22px;
+    position: absolute;
+    top: 1730px;
+    left: 1110px;
+}
+
+#div-9{
+    display: flex;
+}
+
+#p-19{
+    position: absolute;
+    top: 1800px;
+    left: 700px;
+}
+
+#p-20{
+    position: absolute;
+    top: 1800px;
+    left: 910px;
+}
+
+#p-21{
+    position: absolute;
+    top: 1800px;
+    left: 1110px;
+}
+
+#icon-1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 1880px;
+    left: 700px;
+}
+
+#icon-2{
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    top: 1880px;
+    left: 910px;
+}
+
+#icon-3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 1880px;
+    left:  1110px;
+}

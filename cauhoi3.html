@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Làm gì khi tiếp xúc nguy cơ?</title>
+    <style>
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-direction {
+            flex-direction: column;
+        }
+
+        input {
+            background-color: #5de3e3;
+            width: 500px;
+            height: 100px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="logo" src="logonCov.jpg.png">
+    </div>
+    <div id="all-menu-1">
+        <a id="border-1" class="menu" href="corona.html">
+            <p class="font-1">Home</p>
+        </a>
+        <a id="border-2" class="menu" href="info.html">
+            <p class="font-1">Info</p>
+        </a>
+        <a id="border-3" class="menu" href="map.html">
+            <p class="font-1">Map</p>
+        </a>
+        <a id="border-4" class="menu" href="protect.html">
+            <p class="font-1">Protect</p>
+        </a>
+        <a id="border-5" class="menu" href="game.html">
+            <p class="font-1">Game Quiz</p>
+        </a>
+        <a id="border-6" class="menu" href="donate.html">
+            <p class="font-1">Donate</p>
+        </a>
+        <!-- Căn giữu chữ -->
+    </div>
+    <div id="container" class="d-flex flex-direction">
+
+        <div>
+            <p id="question"></p>
+            <p id="score"></p>
+        </div>
+        <div>
+            <div class="d-flex">
+                <input type="button" id="1" onclick=checkAnswer(this.value)>
+                <input type="button" id="2" onclick=checkAnswer(this.value)>
+            </div>
+            <div class="d-flex">
+                <input type="button" id="3" onclick=checkAnswer(this.value)>
+                <input type="button" id="4" onclick=checkAnswer(this.value)>
+            </div>
+            <input type="button" style="height: 30px;width: 120px; background-color: salmon;" onclick=nextQuestion()
+                value=" Next Question ">
+        </div>
+    </div>
+</body>
+<script>
+    var questionList = ["Câu 1: Bạn cần làm gì khi có bạn bè, người thân xung quanh có các triệu chứng nhiễm virus corona?", "Câu 2: Khi đi chợ bán thực phẩm tươi sống, cần tránh nguy cơ tiếp lây nhiễm virus corona bằng cách nào?", "Câu 3:  Bắt tay với người đang có triệu chứng nghi nhiễm Vi rút COVID-19 có nguy cơ lây nhiễm virus corona không, nếu tôi đã đeo khẩu trang?", "Câu 4:  Bắt tay với người đang có triệu chứng nghi nhiễm Vi rút COVID-19 có nguy cơ lây nhiễm virus corona không, nếu tôi đã đeo khẩu trang?"];
+    var answerList = [
+        { A: "A.Thuyết phục họ không giấu bệnh, tự giác cách ly tại nhà ", B: "B. Hướng dẫn họ thông tin về cách xử lí cung cấp ", C: "C. Đến chăm sóc họ mà không có biện pháp bảo vệ cao độ", D: "D. Tránh tiếp xúc gần với họ khi không che kín mắt, mũi, miệng; Rửa tay liên tục bằng xà phòng và nước/dung dịch sát khuẩn có cồn; Súc miệng bằng dung dịch có tác dụng diệt khuẩn như dung dịch chứa chlorhexidine hoặc dung dịch kết hợp các loại tinh dầu tự nhiên: tinh dầu lý bách hương, tinh dầu bạc hà, tinh dầu bạch đàn, tinh dầu Methyl salicylate,…" },
+        { A: "A.Đeo khẩu trang; Dùng bao tay khi chạm tay vào động vật hoặc sản phẩm từ động vật, sau đó rửa tay với xà phòng đúng cách; Tránh tiếp xúc với động vật hoang dã; Súc miệng bằng dung dịch có tác dụng diệt khuẩn như dung dịch chứa chlorhexidine hoặc dung dịch kết hợp các loại tinh dầu tự nhiên: tinh dầu lý bách hương, tinh dầu bạc hà, tinh dầu bạch đàn, tinh dầu Methyl salicylate,…", B: "B. Chỉ cần tránh miệng, có thể chạm tay thoải mái vào mắt, mũi trong quá trình đi chợ", C: "C. Tiếp xúc trực tiếp với động vật đi hoang hoặc dịch, chất thải của chợ.", D: "D. Chỉ dùng tay tiếp xúc với các chất thải" },
+        { A: "A. Ít nhất 2m", B: "B. Ít nhất 1m", C: "C.Tiếp xúc trực tiếp", D: "D. Khoảng 30cm" },
+        { A: "A. Có nguy cơ", B: "B. Chắc chắn không", C: "C. Chắc chắn có", D: "Có thể có hoặc không" }];
+    var correctList = ["A.Thuyết phục họ không giấu bệnh, tự giác cách ly tại nhà ", "A.Đeo khẩu trang; Dùng bao tay khi chạm tay vào động vật hoặc sản phẩm từ động vật, sau đó rửa tay với xà phòng đúng cách; Tránh tiếp xúc với động vật hoang dã; Súc miệng bằng dung dịch có tác dụng diệt khuẩn như dung dịch chứa chlorhexidine hoặc dung dịch kết hợp các loại tinh dầu tự nhiên: tinh dầu lý bách hương, tinh dầu bạc hà, tinh dầu bạch đàn, tinh dầu Methyl salicylate,…", "A. Ít nhất 2m", "A. Có nguy cơ",];
+    var count = 0;
+    var score = 0;
+    function fillQuestion(number) {
+        document.getElementById("question").innerHTML = questionList[number];
+        document.getElementById("1").value = answerList[number].A;
+        document.getElementById("2").value = answerList[number].B;
+        document.getElementById("3").value = answerList[number].C;
+        document.getElementById("4").value = answerList[number].D;
+    }
+
+    function checkAnswer(value) {
+        count = count + 1;
+        var a = document.getElementById("1").value = answerList[count - 1].A;
+        var b = document.getElementById("2").value = answerList[count - 1].B;
+        var c = document.getElementById("3").value = answerList[count - 1].C;
+        var d = document.getElementById("4").value = answerList[count - 1].D;
+        if (value == correctList[count - 1]) {
+            score = score + 1;
+            if (value == a) {
+                document.getElementById("1").style.background = "green";
+            }
+            if (value == b) {
+                document.getElementById("2").style.background = "green";
+            }
+            if (value == c) {
+                document.getElementById("3").style.background = "green";
+            }
+            if (value == d) {
+                document.getElementById("4").style.background = "green";
+            }
+        }
+        if (value != correctList[count - 1]) {
+            if (value == a) {
+                document.getElementById("1").style.background = "red";
+            }
+            if (value == b) {
+                document.getElementById("2").style.background = "red";
+            }
+            if (value == c) {
+                document.getElementById("3").style.background = "red";
+            }
+            if (value == d) {
+                document.getElementById("4").style.background = "red";
+            }
+        }
+        if (count == 4) {
+            alert(score);
+        }
+        document.getElementById("score").innerHTML = score;
+        // fillQuestion(count);
+    }
+
+    window.onload = fillQuestion(count);
+    function nextQuestion() {
+        fillQuestion(count);
+        document.getElementById("1").style.background = "aqua";
+        document.getElementById("2").style.background = "aqua";
+        document.getElementById("3").style.background = "aqua";
+        document.getElementById("4").style.background = "aqua";
+    }
+
+</script>
+
+</script>
+
+</html>

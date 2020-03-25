@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Thói quen cần biết</title>
+    <style>
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-direction {
+            flex-direction: column;
+        }
+
+        input {
+            background-color: #5de3e3;
+            width: 500px;
+            height: 100px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="logo" src="logonCov.jpg.png">
+    </div>
+    <div id="all-menu-1">
+        <a id="border-1" class="menu" href="corona.html">
+            <p class="font-1">Home</p>
+        </a>
+        <a id="border-2" class="menu" href="info.html">
+            <p class="font-1">Info</p>
+        </a>
+        <a id="border-3" class="menu" href="map.html">
+            <p class="font-1">Map</p>
+        </a>
+        <a id="border-4" class="menu" href="protect.html">
+            <p class="font-1">Protect</p>
+        </a>
+        <a id="border-5" class="menu" href="game.html">
+            <p class="font-1">Game Quiz</p>
+        </a>
+        <a id="border-6" class="menu" href="donate.html">
+            <p class="font-1">Donate</p>
+        </a>
+        <!-- Căn giữu chữ -->
+    </div>
+    <div id="container" class="d-flex flex-direction">
+
+        <div>
+            <p id="question"></p>
+            <p id="score"></p>
+        </div>
+        <div>
+            <div class="d-flex">
+                <input type="button" id="1" onclick=checkAnswer(this.value)>
+                <input type="button" id="2" onclick=checkAnswer(this.value)>
+            </div>
+            <div class="d-flex">
+                <input type="button" id="3" onclick=checkAnswer(this.value)>
+                <input type="button" id="4" onclick=checkAnswer(this.value)>
+            </div>
+            <input type="button" style="height: 30px;width: 120px; background-color: salmon;" onclick=nextQuestion()
+                value=" Next Question ">
+        </div>
+    </div>
+</body>
+<script>
+    var questionList = ["Câu 1: Nên ăn những loại thức ăn nào để đảm bảo sức đề kháng?", "Câu 2: Để bảo vệ bản thân trước dịch Virus Corona, tôi cần thay đổi chế độ ăn như thế nào?", "Câu 3: Nên ăn những loại rau quả nào để tăng cường sức đề kháng?", "Câu 4: Uống nước cam hay nhiều vitamin C có giúp tránh được Corona không?"];
+    var answerList = [
+        { A: "A. Những thức ăn lạ hoặc thức ăn không rõ nguồn gốc", B: "B. Ăn thức ăn sạch, đảm bảo vệ sinh thực phẩm tối đa", C: "C. Ăn đủ nhu cầu của cơ thể và đa dạng thực phẩm nhất", D: "D. Cả B và C" },
+        { A: "A. Ăn chín, uống sôi, nấu kĩ thịt và trứng", B: "B. Ăn đủ rau, hoa quả, uống nhiều nước", C: "C. Vẫn có thể ăn đồ ăn trong khu vực nhiễm dịch miễn đảm bảo quy trình CHẾ BIẾN AN TOÀN và thức ăn CHÍN KỸ", D: "D. Ăn đồ tái, gỏi sống, tiết canh…" },
+        { A: "A. Kiwi, cam, đu đủ", B: "B. Súp lơ xanh, cải xanh,...", C: "C. Chỉ cần uống vitamin C dạng viên", D: "D. Ăn những loại quả cso chứa nhiều Vitamin C." },
+        { A: "A. Có", B: "B. Không", C: "C. Có thể", D: "D. Không chắc" }];
+    var correctList = ["D. Cả B và C", "C. Vẫn có thể ăn đồ ăn trong khu vực nhiễm dịch miễn đảm bảo quy trình CHẾ BIẾN AN TOÀN và thức ăn CHÍN KỸ", "D. Ăn những loại quả cso chứa nhiều Vitamin C.", "B. Không"];
+    var count = 0;
+    var score = 0;
+    function fillQuestion(number) {
+        document.getElementById("question").innerHTML = questionList[number];
+        document.getElementById("1").value = answerList[number].A;
+        document.getElementById("2").value = answerList[number].B;
+        document.getElementById("3").value = answerList[number].C;
+        document.getElementById("4").value = answerList[number].D;
+    }
+
+    function checkAnswer(value) {
+        count = count + 1;
+        var a = document.getElementById("1").value = answerList[count - 1].A;
+        var b = document.getElementById("2").value = answerList[count - 1].B;
+        var c = document.getElementById("3").value = answerList[count - 1].C;
+        var d = document.getElementById("4").value = answerList[count - 1].D;
+        if (value == correctList[count - 1]) {
+            score = score + 1;
+            if (value == a) {
+                document.getElementById("1").style.background = "green";
+            }
+            if (value == b) {
+                document.getElementById("2").style.background = "green";
+            }
+            if (value == c) {
+                document.getElementById("3").style.background = "green";
+            }
+            if (value == d) {
+                document.getElementById("4").style.background = "green";
+            }
+        }
+        if (value != correctList[count - 1]) {
+            if (value == a) {
+                document.getElementById("1").style.background = "red";
+            }
+            if (value == b) {
+                document.getElementById("2").style.background = "red";
+            }
+            if (value == c) {
+                document.getElementById("3").style.background = "red";
+            }
+            if (value == d) {
+                document.getElementById("4").style.background = "red";
+            }
+        }
+        if (count == 4) {
+            alert(score);
+        }
+        document.getElementById("score").innerHTML = score;
+    }
+
+    window.onload = fillQuestion(count);
+
+
+</script>
+
+</html>

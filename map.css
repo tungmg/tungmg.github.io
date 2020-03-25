@@ -1,0 +1,661 @@
+#logo{
+    margin: 0;
+    width: 150px;
+    margin-top: -30px;
+}
+#border-1:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-2:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-3:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-4:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-5:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+#border-6:hover{
+    background-color: black;
+    transition-duration: 0.4s;
+}
+
+.menu{
+    background-color: white;
+    text-decoration: none;
+    color: white;
+    font-family: avenir-lt-w01_85-heavy1475544,sans-serif;
+    margin-top: -14px;
+    
+}
+
+
+#all-menu-1{
+    text-align: right;
+    font-size: 20px;
+    margin-right: -7px;
+    display:flex;
+    justify-content:flex-end;
+    margin-top: -108px;
+}
+
+
+
+#picture-1{
+    width: 1280px;
+    margin-top: -0,2px;
+    margin-left: -10px;
+    background-attachment: fixed;
+    /* margin-right: 10px; */
+}
+
+#border-1{
+    height: 80px;
+    width: 130px;
+    background-color: #82bbf5;
+    text-align: center;
+}
+
+#border-2{
+    height: 80px;
+    width: 130px;
+    background-color: #9d56e8;
+    text-align: center;
+}
+
+#border-3{
+    height: 80px;
+    width: 130px;
+    background-color:#82bbf5;
+    text-align: center;
+}
+
+#border-4{
+    height: 80px;
+    width: 130px;
+    background-color: #9d56e8;
+    text-align: center;
+}
+
+#border-5{
+    height: 80px;
+    width: 130px;
+    background-color:#82bbf5;
+    text-align: center;
+}
+
+#border-6{
+    height: 80px;
+    width: 130px;
+    background-color: #9d56e8;
+    text-align: center;
+}
+
+.font-1{
+    margin-top: 26px;
+}
+
+/* End-menu */
+
+#khung{
+    background-color: #3d3c38;
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 180px;
+    left: 100px;
+}
+
+#navbar{
+    background-color: #3d3c38;
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 180px;
+    left: 600px;
+    margin-left: 50px;
+}
+
+#map{
+    background-image: url('vn-map.jpg');
+    background-size: cover;
+    width: 1000px;
+    height: 1850px;
+    /* position: absolute;
+    top:500px;
+    left: 120px; */
+    margin-top: 400px;
+    margin-left: 120px;
+    /* vietnam-political-map.jpg */
+}
+
+
+#HA_NOI{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 730px;
+    left: 460px;  
+} 
+.neu_mac_benh{
+    width: 160px;
+    height: 120px;
+    background-color:black;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    color: white;
+}
+#HA_NOI:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: -50px;
+    left: 30px;
+}
+
+#HCM{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1700px;
+    left: 550px;
+} 
+
+#HCM:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#VINH-PHUC{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 680px;
+    left: 435px;
+} 
+
+#VINH-PHUC:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#BINH-THUAN{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1660px;
+    left: 680px;
+} 
+
+#BINH-THUAN:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#QUANG_NINH{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 700px;
+    left: 580px;
+} 
+
+#QUANG_NINH:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#DONG-THAP{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1700px;
+    left: 450px;
+} 
+
+#DONG-THAP:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#DA-NANG{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1190px;
+    left: 675px;
+} 
+
+#DA-NANG:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#QUANG-NAM{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1250px;
+    left: 675px;
+} 
+
+#QUANG-NAM:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#TRA-VINH{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1790px;
+    left: 520px;
+} 
+
+#TRA-VINH:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+}
+
+#LAO-CAI{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 600px;
+    left: 320px;
+} 
+
+#LAO-CAI:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#HUE{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1150px;
+    left: 620px;
+} 
+
+#HUE:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#NINH-THUAN{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1590px;
+    left: 750px;
+} 
+
+#NINH-THUAN:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#HAI-DUONG{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 730px;
+    left: 535px;  
+} 
+
+#HAI-DUONG:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#KHANH-HOA{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1520px;
+    left: 770px;
+} 
+
+#KHANH-HOA:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#THANH-HOA{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 820px;
+    left: 435px;
+} 
+
+#THANH-HOA:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#BAC-NINH{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 680px;
+    left: 500px;
+} 
+
+#BAC-NINH:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#NINH-BINH{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 780px;
+    left: 470px;
+} 
+
+#NINH-BINH:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+
+#BEN-TRE{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50px;
+    height: 50px;
+    background-image: url('flag-icon-512.png');
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 1750px;
+    left: 520px;
+} 
+
+#BEN-TRE:hover .neu_mac_benh{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    z-index: 100;
+}
+/*  */
+.scroll1{
+    width: 200px;
+    height: 300px;
+    overflow: scroll;
+}
+
+.p-1{
+    color: #bdbdbd;
+    margin-left: 30px;
+}
+
+.span-1{
+    color: white;
+    background-color: rgb(189, 33, 48);
+    margin-left: 30px;
+    border-radius: 20px/30px;
+    white-space: pre;
+}
+
+.span-2{
+    color: white;
+    background-color: rgb(164, 201, 57);
+    margin-left: 10px;
+    border-radius: 20px/30px;
+    white-space: pre;
+}
+
+.hr{
+    background-color: black;
+}
+
+#h-1{
+    color: #bdbdbd;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 32px;
+}
+
+#p-2{
+    color: #bdbdbd;
+    font-size: 20px;
+    text-align: center;
+}
+
+#div-1{
+    border-radius: 100%;
+    white-space: pre;
+    background-color: red;
+    margin-left: 140px;
+    margin-top: 35px;
+}
+
+#div-2{
+    border-radius: 100%;
+    white-space: pre;
+    background-color: rgb(164, 201, 57);
+    margin-left: 140px;
+    /* margin-top: 75px; */
+    height: 50px;
+}
+
+.p-3{
+    color: white;
+    margin-left: 30px;
+}
+
+/* Contact */
+#h-9{
+    font-family:poppins-semibold,poppins,sans-serif ;
+    font-size: 50px;
+    position: absolute;
+    top: 2500px;
+    left: 70px;
+}
+
+#p-15{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 15px;
+    position: absolute;
+    top: 2600px;
+    left: 70px;
+}
+
+#p-16{
+    font-size: 22px;
+    position: absolute;
+    top: 2520px;
+    left: 700px;
+}
+
+#p-17{
+    font-size: 22px;
+    position: absolute;
+    top: 2520px;
+    left: 910px;
+}
+
+#p-18{
+    font-size: 22px;
+    position: absolute;
+    top: 2520px;
+    left: 1110px;
+}
+
+#div-9{
+    display: flex;
+}
+
+#p-19{
+    position: absolute;
+    top: 2000;
+    left: 2600;
+}
+
+#p-20{
+    position: absolute;
+    top: 2610px;
+    left: 910px;
+}
+
+#p-21{
+    position: absolute;
+    top: 2610px;
+    left: 1100px;
+}
+
+#icon-1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 2700px;
+    left: 700px;
+}
+
+#icon-2{
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    top: 2700px;
+    left: 910px;
+}
+
+#icon-3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 2700px;
+    left:  1110px;
+}

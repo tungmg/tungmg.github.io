@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="donate.css">
+</head>
+
+<body>
+    <div>
+        <img id="logo" src="logo last.png">
+    </div>
+    <div class="navbar" id="all-menu-1">
+        <a id="border-1" class="menu" href="index.html">
+            <p class="font-1">Home</p>
+        </a>
+        <a id="border-2" class="menu" href="info.html">
+            <p class="font-1">Info</p>
+        </a>
+        <a id="border-3" class="menu" href="map.html">
+            <p class="font-1">Map</p>
+        </a>
+        <a id="border-4" class="menu" href="protect.html">
+            <p class="font-1">Protect</p>
+        </a>
+        <a id="border-5" class="menu" href="game.html">
+            <p class="font-1">Game Quiz</p>
+        </a>
+        <a id="border-6" class="menu" href="donate.html">
+            <p class="font-1">Donate</p>
+        </a>
+        <!-- Căn giữu chữ -->
+    </div>
+    <div id="div-1"></div>
+    <h1 id="h-1">HÃY DONATE <br> <span style="color: rgb(241, 86, 42);"> VÌ TƯƠNG LAI TỐT ĐẸP</span> </h1>
+    <div id="div-2">
+        <h2 id="h-2">1. VISA CARD</h2>
+        <img id="img-1" src="Lợi-ích-từ-việc-sử-dụng-visa-card.png">
+    </div>
+    <div id="div-3">
+        <h2 id="h-3">2. THẺ NỘI ĐỊA</h2>
+        <img id="img-2" src="the-thanh-toan-noi-dia-la-gi-1.jpg">
+    </div>
+    <p id="p-1"> - Chủ tài khoản: Nguyễn Văn A <br> - Số tải khoản: 01234567891234 (Vietcombank và Visa Card)</p>
+    <img id="img-3" src="donate picture.jpg">
+    <div id="div-4"></div>
+    <h1 id="h-5">DONATE</h1>
+    <input id="ip-1" type="text" placeholder="Họ và Tên">
+    <input id="ip-2" type="text" placeholder="Số điện thoại">
+    <select id="select">
+        <option value="chọn">Chọn hình thức thanh toán</option>
+        <option value="visa-card">Visa-card</option>
+        <option value="Thẻ nội địa">Thẻ nội địa</option>
+    </select>
+    <input id="ip-4" type="text" placeholder="Số Tài khoản giao dịch">
+    <input id="ip-5" type="button" value="DONATE" onclick="nop()">
+    <!-- Contact -->
+    <h1 id="h-9">Contact Us</h1>
+    <p id="p-15">Hãy tham gia với chúng tôi qua các trang xã hội<br> Nếu có muốn biết thêm thông tin hãy nhắn tin với
+        chúng tôi <br> Điền thông tin của bạn nếu muốn tham gia nhóm cùng chúng tôi</p>
+    <p id="p-16">Địa chỉ</p>
+    <p id="p-17">Điện thoại</p>
+    <p id="p-18">Email</p>
+    <div id="div-9">
+        <p id="p-19">Tầng 5, 71 Nguyễn Chí <br>Thanh Hà Nội</p>
+        <p id="p-20">024 777 51 999</p>
+        <p id="p-21">zoducminh@gmail.com</p>
+    </div>
+    <a href=""><img id="icon-1" src="facebook-512.png"></a>
+    <a href=""><img id="icon-2" src="ping.png"></a>
+    <a href=""><img id="icon-3" src="BW_Youtube_glyph_svg-512.png"></a>
+    <div style="margin-left:60px; margin-top: 1900px;">
+        <input style="height: 50px; width: 350px; margin-top: -200px;" type="text" placeholder="Họ và Tên">
+        <br>
+        <input style="height: 50px; width: 350px;" type="text" placeholder="Số điện thoại">
+        <br>
+        <input style="height: 50px; width: 350px;" type="text" placeholder="Email">
+    </div>
+    <input style="margin-left: 300px; margin-top:30px; width: 80px; height: 40px;" type="button" onclick="text()"
+        value="GỬI">
+    <p style="margin-left: 750px; margin-top: -20px;">© 2020 by Covid-Team. Proudly created with MindX</p>
+</body>
+<script>
+    function nop() {
+        var name = document.getElementById("ip-1");
+        var phone = document.getElementById("ip-2");
+        var bankSelector = document.getElementById("select");
+        var stk = document.getElementById("ip-4");
+
+        var account = {
+            namevalue: name.value,
+            phonevalue: phone.value,
+            bankvalue: bankSelector.options[bankSelector.selectedIndex].value,
+            stkvalue: stk.value
+        }
+        if (account.namevalue == "") {
+            name.style.border = "1px solid red";
+            alert("Hãy điền tên")
+        }
+        if (account.phonevalue == "") {
+            phone.style.border = "1px solid red";
+            alert("Hãy điền số điện thoại");
+        }
+        if (account.bankvalue == "chọn") {
+            bankSelector.style.border = "1px solid red";
+            alert("Hãy chọn hình thức thanh toán");
+        }
+        if (account.stkvalue == "") {
+            stk.style.border = "1px solid red";
+            alert("Hãy điền số tài khoản")
+        }
+        if (account.namevalue != "" && account.phonevalue != "" && account.bankvalue != "Chọn hình thức thanh toán" && account.stkvalue != "") {
+            let uniqueId = 'id-' + Math.random().toString(36).substr(2, 16);
+            localStorage.setItem(uniqueId, account.namevalue + " " + account.phonevalue + " " + account.bankvalue + " " + account.stkvalue);
+            text();
+        }
+    }
+
+    function text() {
+        alert('Cảm ơn vì đã tham gia');
+        name.value = "";
+        phone.value = "";
+        bank
+        stk.value = "";
+    }  
+</script>
+
+</html>
